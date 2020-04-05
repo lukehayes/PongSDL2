@@ -14,14 +14,31 @@ int main(int argc, char* argv[])
 
 	SDL_Event event;
 
-	while (1) {
+	const int MS_PER_UPDATE = 30;
+	double previous = SDL_GetTicks();
+	double lag = 0.0;
+	while (true)
+	{
+		double current = SDL_GetTicks();
+		double elapsed = current - previous;
+		previous = current;
+		lag += elapsed;
+
+		// processInput();
 
 		SDL_PollEvent(&event);
 		if (event.type == SDL_QUIT) {
 			break;
 		}
 
-		SDL_SetRenderDrawColor(renderer, 0, 150, 200, 255);
+		while (lag >= MS_PER_UPDATE)
+		{
+			// update();
+			lag -= MS_PER_UPDATE;
+		}
+
+		// render();
+		SDL_SetRenderDrawColor(renderer, 0, 150, 0, 155);
 		SDL_RenderClear(renderer);
 		SDL_RenderPresent(renderer);
 	}
