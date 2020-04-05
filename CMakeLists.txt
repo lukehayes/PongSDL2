@@ -27,10 +27,12 @@ if (WIN32)
     include_directories(${INC_DIRS})
     link_directories(${PROJECT_SOURCE_DIR}/deps/libs/SDL/libs)
 
+
     # Add source to this project's executable.
     add_executable (app "${SRC_FILE}")
+    add_subdirectory(src/app)
 
-    target_link_libraries(app SDL2.lib)
+    target_link_libraries(app game SDL2.lib)
     target_link_libraries(app SDL2main.lib)
 
 endif(WIN32)
