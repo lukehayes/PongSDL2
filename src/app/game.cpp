@@ -1,6 +1,11 @@
 #include "app/game.h"
 
 namespace App {
-	Game::Game() { std::cout << "Game Loaded" << std::endl; }
-	Game::~Game() { std::cout << "Game Destroyed" << std::endl; }
+
+	Game::Game(int width, int height, const char* title)
+	: WIDTH(width), HEIGHT(height), title(title)
+	{
+	}
+
+	Game::~Game() {}
 }
