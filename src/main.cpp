@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "SDL.h"
 #include "app/game.h"
+#include <cmath>
 
 int main(int argc, char* argv[])
 {
@@ -44,6 +45,7 @@ int main(int argc, char* argv[])
 		SDL_SetRenderDrawColor(renderer, 100, 0, 0, 255);
 		SDL_RenderClear(renderer);
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+
 
 		SDL_RenderPresent(renderer);
 	}

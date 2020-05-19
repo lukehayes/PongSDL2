@@ -30,10 +30,13 @@ if (WIN32)
 
     # Add source to this project's executable.
     add_executable (app "${SRC_FILE}")
+
     add_subdirectory(src/app)
+    add_subdirectory(src/entity)
 
     target_link_libraries(app game SDL2.lib)
     target_link_libraries(app SDL2main.lib)
+    target_link_libraries(app entity)
 
 endif(WIN32)
 
