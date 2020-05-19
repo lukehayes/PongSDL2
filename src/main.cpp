@@ -1,31 +1,6 @@
 ﻿#include <iostream>
 #include "SDL.h"
 #include "app/game.h"
-#include <cmath>
-
-class Shape {
-public:
-
-	Shape() {
-		this->r.x = 100;
-		this->r.y = 100;
-		this->r.w = 10;
-		this->r.h = 10;
-	}
-	
-	void update(float delta) {
-		this->r.x = this->r.x + 1;
-		this->r.y = this->r.y + 1;
-	}
-
-	void render(SDL_Renderer* renderer) {
-		SDL_RenderFillRect(renderer, &this->r);
-	}
-
-	SDL_Rect r;
-	int x = 100;
-	int y = 100;
-};
 
 int main(int argc, char* argv[])
 {
@@ -41,8 +16,6 @@ int main(int argc, char* argv[])
 	SDL_CreateWindowAndRenderer(800, 600, SDL_WINDOW_RESIZABLE, &window, &renderer);
 
 	SDL_Event event;
-
-	Shape shape;
 
 	const int MS_PER_UPDATE = 30;
 	double previous = SDL_GetTicks();
@@ -64,7 +37,6 @@ int main(int argc, char* argv[])
 		while (lag >= MS_PER_UPDATE)
 		{
 			// update();
-			shape.update(10.0);
 			lag -= MS_PER_UPDATE;
 		}
 
@@ -72,7 +44,6 @@ int main(int argc, char* argv[])
 		SDL_SetRenderDrawColor(renderer, 100, 0, 0, 255);
 		SDL_RenderClear(renderer);
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-		shape.render(renderer);
 
 		SDL_RenderPresent(renderer);
 	}
