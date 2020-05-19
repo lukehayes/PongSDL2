@@ -11,12 +11,15 @@ namespace Entity {
 		Entity(int x, int y);
 		~Entity();
 
+		SDL_Rect getRect() const;
+
 		int x;
 		int y;
 		int w;
 		int h;
 
 	private:
+		SDL_Rect rect;
 
 	};
 }
