@@ -9,6 +9,7 @@ namespace Entity {
 
 	public:
 		Entity(int x, int y);
+		Entity(const Entity& rhs);
 		~Entity();
 
 		SDL_Rect getRect() const;
