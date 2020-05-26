@@ -13,6 +13,17 @@ namespace Entity {
 		this->rect = { x,y,w,h };
 	}
 
+	Entity& Entity::operator=(const Entity& rhs) 
+	{
+		this->x = rhs.x;
+		this->y = rhs.y;
+		this->w = rhs.w;
+		this->h = rhs.h;
+	
+		return *this;
+	}
+
+
 	Entity::~Entity() {}
 
 	SDL_Rect Entity::getRect() const
