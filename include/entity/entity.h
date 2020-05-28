@@ -11,6 +11,9 @@ namespace Entity {
 		Entity(int x, int y);
 		Entity(const Entity& rhs);
 		Entity& operator=(const Entity& rhs);
+		
+		virtual void update(double dt) = 0;
+
 		~Entity();
 	private:
 
