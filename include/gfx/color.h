@@ -20,5 +20,6 @@ namespace Gfx {
 extern Gfx::Color RED(255,0,0,255);
 extern Gfx::Color GREEN(0,255,0,255);
 extern Gfx::Color BLUE(0,0,255,255);
+extern Gfx::Color PINK(200,180,0,255);
 
 #endif;
