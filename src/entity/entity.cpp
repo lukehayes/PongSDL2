@@ -3,12 +3,13 @@
 
 namespace Entity {
 
-	Entity::Entity(int x, int y)
+	Entity::Entity(int x, int y, Gfx::Color c)
 	{
 		this->x = x;
 		this->y = y;
 		this->w = 10;
 		this->h = 10;
+		this->color = c;
 	}
 
 	Entity::Entity(const Entity& rhs)
