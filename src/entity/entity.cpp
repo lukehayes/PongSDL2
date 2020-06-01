@@ -9,7 +9,7 @@ namespace Entity {
 		this->y = y;
 		this->w = 10;
 		this->h = 10;
-		this->color = c;
+		this->m_color = c;
 	}
 
 	Entity::Entity(const Entity& rhs)
