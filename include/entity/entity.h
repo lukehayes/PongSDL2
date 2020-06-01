@@ -17,7 +17,7 @@ namespace Entity {
 
 		~Entity();
 	private:
-		Gfx::Color color;
+		Gfx::Color m_color;
 
 	};
 }
