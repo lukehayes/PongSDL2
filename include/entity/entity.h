@@ -13,7 +13,7 @@ namespace Entity {
 		Entity(const Entity& rhs);
 		Entity& operator=(const Entity& rhs);
 		
-		void update(double dt) {}
+		virtual void update(double dt) = 0;
 
 		~Entity();
 	private:
