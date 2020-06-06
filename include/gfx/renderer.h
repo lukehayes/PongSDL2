@@ -2,6 +2,7 @@
 #define RENDERER_H
 
 #include "SDL.h"
+#include "entity/shape.h"
 
 namespace Gfx {
 
@@ -26,10 +27,23 @@ namespace Gfx {
 			return m_renderer;
 		}
 
+        /**
+         * Draw an Entity to the screen
+         */
+        void draw(const Entity::Entity& entity, Gfx::Color c = {255,255,255,255}) {
+            this->clear();
+			SDL_SetRenderDrawColor(m_renderer, 
+                    c.r,
+                    c.g,
+                    c.b,
+                    c.a
+            );
+            SDL_RenderFillRect(m_renderer, &entity);
+        }
+
         
         /**
          * Draw the current contents to the screen
-         *
          */
         void present() {
             SDL_RenderPresent(m_renderer);
