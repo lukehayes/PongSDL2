@@ -22,4 +22,4 @@ namespace Gfx {
 //extern gfx::color blue(0,0,255,255);
 //extern gfx::color pink(200,180,0,255);
 
-#endif;
+#endif

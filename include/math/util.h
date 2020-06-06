@@ -1,7 +1,7 @@
 #ifndef MATH_UTIL_H
 #define MATH_UTIL_H
 
-#include "entity/entity.h";
+#include "entity/entity.h"
 #include <iostream>
 
 namespace Math {

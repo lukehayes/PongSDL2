@@ -31,4 +31,4 @@ namespace Gfx {
 	};
 }
 
-#endif;
+#endif
