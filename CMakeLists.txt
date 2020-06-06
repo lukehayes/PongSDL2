@@ -49,6 +49,7 @@ if(APPLE OR UNIX)
 
     # Modules Path
     set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+    set(CMAKE_CXX_STANDARD 20)
 
     # Find SDL2 on OSX - must be at top
     find_package (SDL2 REQUIRED)
