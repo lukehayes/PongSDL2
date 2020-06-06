@@ -26,6 +26,15 @@ namespace Gfx {
 			return m_renderer;
 		}
 
+        
+        /**
+         * Draw the current contents to the screen
+         *
+         */
+        void present() {
+            SDL_RenderPresent(m_renderer);
+        }
+
 	private:
 		SDL_Renderer* m_renderer;
 	};
