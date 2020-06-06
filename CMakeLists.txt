@@ -44,7 +44,7 @@ endif(WIN32)
 # ------------------------------------------------------
 # OSX
 # ------------------------------------------------------
-if(APPLE)
+if(APPLE OR UNIX)
     message("Running on APPLE")
 
     # Modules Path
@@ -63,8 +63,9 @@ if(APPLE)
     add_executable (app "${SRC_FILE}")
 
     add_subdirectory(${PROJECT_SOURCE_DIR}/src/app)
+    add_subdirectory(src/entity)
 
-    target_link_libraries (app game ${SDL2_LIBRARIES})
+    target_link_libraries (app game entity ${SDL2_LIBRARIES})
 
-endif(APPLE)
+endif(APPLE OR UNIX)
 
