@@ -6,13 +6,6 @@
 #include "gfx/color.h"
 #include "gfx/renderer.h"
 #include "math/util.h"
-#include <cmath>
-#include <list>
-
-void render(const Gfx::Renderer& renderer, Gfx::Color c) {
-	SDL_RenderClear(renderer.getRenderer());
-	SDL_SetRenderDrawColor(renderer.getRenderer(), c.r, c.g, c.b, c.a);
-}
 
 int main(int argc, char* argv[])
 {
@@ -26,11 +19,12 @@ int main(int argc, char* argv[])
 	SDL_Window* window;
 	window = SDL_CreateWindow("Game Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800,600, SDL_WINDOW_RESIZABLE);
 
-	const Gfx::Renderer r(window);
+	Gfx::Renderer r(window);
 
 	SDL_Event event;
 
-	Shape s1(10, 300, 3);
+    Entity::Shape s1(100, 300, 3);
+
 
 	const int MS_PER_UPDATE = 30;
 	double previous = SDL_GetTicks();
@@ -58,17 +52,9 @@ int main(int argc, char* argv[])
 
 		}
 
-		if (!Math::moveTo(s1, 300, 300, lag)) {
-			std::cout << "Moving..." << std::endl;
-		}
 
-
-		r.clear();
-		render(r, Gfx::Color(100,200,200,255));
-		SDL_RenderFillRect(r.getRenderer(), &s1);
-
-
-		SDL_RenderPresent(r.getRenderer());
+        r.draw(s1);
+        r.present();
 	}
 
 	SDL_DestroyWindow(window);
