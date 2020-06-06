@@ -3,6 +3,8 @@
 
 #include "entity/entity.h"
 
+namespace Entity {
+    
 class Shape : public Entity::Entity {
 public:
 	Shape(int x, int y, int s = 1) : speed(s), Entity::Entity(x, y) {}
@@ -17,5 +19,7 @@ public:
 
 	int speed;
 };
+
+} /* namespace Entity */
 
 #endif
