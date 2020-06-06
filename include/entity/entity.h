@@ -1,7 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-#include "SDL_rect.h";
+#include "SDL_rect.h"
 #include "gfx/color.h"
 
 namespace Entity {
