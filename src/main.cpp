@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 	App::Game g(800,600, "WINDOW");
 
 	SDL_Window* window;
-	window = SDL_CreateWindow("Game Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800,600, SDL_WINDOW_RESIZABLE);
+	window = SDL_CreateWindow("Sand Simulator", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800,600, SDL_WINDOW_RESIZABLE);
 
 	Gfx::Renderer r(window);
 
