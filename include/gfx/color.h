@@ -15,11 +15,19 @@ namespace Gfx {
 		int b;
 		int a;
 	};
+
+    /** Static Colours */
+    static Gfx::Color WHITE{ 255, 255, 255,255 };
+    static Gfx::Color BLACK{ 19, 19, 20, 255 };
+
+    static Gfx::Color BG_GREY{ 180, 180, 200, 255 };
+    static Gfx::Color LIGHT_GREY{ 244, 245, 247, 255 };
+    static Gfx::Color DARK_GREY{ 86, 86, 97, 255 };
+
+    static Gfx::Color RED{ 237, 22, 67, 255 };
+    static Gfx::Color GREEN{ 87, 181, 98, 255 };
+    static Gfx::Color BLUE{ 45, 107, 207, 255 };
 }
 
-//extern gfx::color red(255,0,0,255);
-//extern gfx::color green(0,255,0,255);
-//extern gfx::color blue(0,0,255,255);
-//extern gfx::color pink(200,180,0,255);
 
 #endif
