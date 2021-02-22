@@ -18,8 +18,13 @@ namespace Gfx {
 			SDL_DestroyRenderer(m_renderer);
 		}
 
-		void clear() const {
-			SDL_SetRenderDrawColor(m_renderer, 55, 100, 55, 255);
+		void clear(const Gfx::Color& clearColor = Gfx::BG_GREY) const {
+			SDL_SetRenderDrawColor(m_renderer, 
+                    clearColor.r,
+                    clearColor.g,
+                    clearColor.b,
+                    clearColor.a
+            );
 			SDL_RenderClear(m_renderer);
 		}
 
