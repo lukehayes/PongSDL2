@@ -23,12 +23,14 @@ int main(int argc, char* argv[])
 
 	SDL_Event event;
 
-    Entity::Shape s1(100, 300, 3);
+    Entity::Shape s1(100.0, 300.0, 50);
+    Entity::Shape s2(300, 100, 100);
 
 
 	const int MS_PER_UPDATE = 30;
 	double previous = SDL_GetTicks();
 	double lag = 0.0;
+	double delta = 0.0;
 
 	while (true)
 	{
@@ -49,10 +51,19 @@ int main(int argc, char* argv[])
 		{
 			// update();
 			lag -= MS_PER_UPDATE;
+            delta = lag/MS_PER_UPDATE;
+
+            std::cout << delta << std::endl;
+
+
+            s1.update(delta);
+            s2.update(delta);
 
 		}
 
 
+        r.clear();
+        r.draw(s2, Gfx::BLACK);
         r.draw(s1);
         r.present();
 	}
