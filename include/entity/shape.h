@@ -10,14 +10,14 @@ public:
 	Shape(int x, int y, int s = 1) : speed(s), Entity::Entity(x, y) {}
 
 	void update(double dt) {
-		x += 1 * speed;
+		x += 1 * speed * dt;
 
 		if (x > 100) {
 			x = 0;
 		}
 	}
 
-	int speed;
+	double speed;
 };
 
 } /* namespace Entity */
