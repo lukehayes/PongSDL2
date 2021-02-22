@@ -31,7 +31,6 @@ namespace Gfx {
          * Draw an Entity to the screen
          */
         void draw(const Entity::Entity& entity, Gfx::Color drawColor = {255,0,255,255}) {
-            this->clear();
 			SDL_SetRenderDrawColor(m_renderer, 
                     drawColor.r,
                     drawColor.g,
