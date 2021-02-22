@@ -19,8 +19,8 @@ namespace Gfx {
 		}
 
 		void clear() const {
-			SDL_RenderClear(m_renderer);
 			SDL_SetRenderDrawColor(m_renderer, 55, 100, 55, 255);
+			SDL_RenderClear(m_renderer);
 		}
 
 		SDL_Renderer* getRenderer() const {
