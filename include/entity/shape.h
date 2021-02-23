@@ -5,7 +5,7 @@
 
 namespace Entity {
     
-class Shape : public Entity::Entity {
+class Shape : public Entity {
 public:
 	Shape(int x, int y, int s = 1) : speed(s), Entity::Entity(x, y) {}
 
