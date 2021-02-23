@@ -6,7 +6,7 @@
 
 namespace Math {
 	
-	bool moveTo(Entity::Entity& entity, int x, int y, double dt) {
+	void moveTo(Entity::Entity& entity, int x, int y, double dt) {
 		entity.x -= x * dt;
 		entity.y -= y * dt;
 	}
